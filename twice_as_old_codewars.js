@@ -6,6 +6,23 @@ current age of his son (years)
 Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).
 */
 
-function twiceAsOld(dadYearsOld, sonYearsOld) {
-  // your code here
+const twiceAsOld = (dadYearsOld, sonYearsOld) => {
+  let counter = 0;
+  let twice = sonYearsOld * 2;
+  if(dadYearsOld === twice) {
+    return 0;
+  }
+  if(dadYearsOld < twice) {
+    while(dadYearsOld < twice) {
+      counter++;
+      dadYearsOld++;
+    }
+  }
+  if(dadYearsOld > twice) {
+    while(dadYearsOld > twice) {
+      counter++;
+      dadYearsOld--;
+    }
+  }
+  return counter;
 }
